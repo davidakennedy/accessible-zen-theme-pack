@@ -1,0 +1,19 @@
+/*
+Theme Name:     Accessible Zen Child Theme
+Theme URI:      http://github.com/davidakennedy/accessible-zen-theme-pack
+Description:    A child theme for the Accessible Zen, created by David A. Kennedy.
+Author:         Your name here
+Author URI:     http://yoursite.com/
+Template:       accessible-zen                             
+Version:        0.1.0
+
+Child themes are awesome! Read more here: http://codex.wordpress.org/Child_Themes
+*/
+
+/* Let's import the stylesheet from Accessible Zen. */
+@import url("../accessible-zen/style.css");
+
+/* After this. you can override Accessible Zen's styles, and do your own thing!
+ * Remember, do your best to stay accessible! :)
+ *
+ */
