@@ -1,0 +1,376 @@
+/*
+Theme Name:     Accessible Zen Dark
+Theme URI:      http://github.com/davidakennedy/accessible-zen-theme-pack
+Description:    A child theme  with a dark on light color scheme for the Accessible Zen, created by David A. Kennedy.
+Author:         David A. Kennedy
+Author URI:     http://davidakennedy.com/
+Template:       accessible-zen                             
+Version:        1.0
+
+Child themes are awesome! Read more here: http://codex.wordpress.org/Child_Themes
+*/
+
+/* Let's import the stylesheet from Accessible Zen. */
+@import url("../accessible-zen/style.css");
+
+/* After this. you can override Accessible Zen's styles, and do your own thing!
+ * Remember, do your best to stay accessible! :)
+ *
+ */
+ 
+/* =Structure
+----------------------------------------------- */
+/* Outer containers */
+.site {
+	background-color: #222;
+}
+body.custom-background-empty {
+	background-color: #222;
+}
+
+/* =Global
+----------------------------------------------- */
+body,
+button,
+input,
+select,
+textarea {
+	color: #f5f5f5;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	color: #59cdff;
+}
+
+/* Code */
+pre,
+code,
+kbd,
+samp {
+	background: #333;
+}
+
+/* Forms */
+legend {
+	color: #f5f5f5;
+}
+/* Indicate that 'label' will shift focus to the associated form element */
+label {
+	color: #f5f5f5;
+}
+button, input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 2px solid #444;
+	border-color: #666 #444 #444 #444;
+	background-color: #666;
+	color: #f5f5f5;
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background-color: #333;
+	border-color: #444 #444 #666 #444;
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	background-color: #333;
+	border-color: #666 #666 #15B9ff #666;
+}
+input[type="text"],
+input[type="email"],
+input[type="search"],
+textarea {
+	color: #f5f5f5;
+	background: #333;
+	border: 2px solid #444;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	border: 2px solid #15B9ff;
+}
+
+/* Quotes */
+blockquote {
+	border-left: 3px solid #15B9ff;
+	color: #fff;
+}
+
+/* Hyperlinks */
+a {
+	color: #59cdff;
+	border-bottom: 1px dotted #59cdff;
+}
+a:hover,
+a:active,
+a:focus {
+	color: #15B9ff;
+	border-bottom: 1px solid #15B9ff;
+}
+a:focus {
+	outline: thin dotted #15B9ff;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: #59cdff;
+}
+h1 a:hover,
+h1 a:active,
+h1 a:focus,
+h2 a:hover,
+h2 a:active,
+h2 a:focus,
+h3 a:hover,
+h3 a:active,
+h3 a:focus,
+h4 a:hover,
+h4 a:active,
+h4 a:focus,
+h5 a:hover,
+h5 a:active,
+h5 a:focus,
+h6 a:hover,
+h6 a:active,
+h6 a:focus {
+	color: #15B9ff;
+	border-bottom: 1px solid #15B9ff;
+}
+
+/* Media */
+.site-banner a {
+	border: 0 none;
+}
+
+/* Marked, Inserted, Deleted and Highlighted Text */
+abbr[title],
+dfn[title] {
+	border-bottom: 1px dotted #d5d5d5;
+}
+
+mark, ins {
+	color: #222;
+}
+::-moz-selection {
+	background: #15B9ff;
+	color: #222; text-shadow: none;
+}
+::selection {
+	background: #15B9ff;
+	color: #222;
+	text-shadow: none;
+}
+
+/* Others
+----------------------------------------------- */
+/* Callout */
+.callout {
+	background: #59cdff;
+	border: 1px solid #15B9ff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #222;
+	padding: 1em;
+}
+
+/* Hyperlinks */
+.callout a {
+	color: #222;
+	border-bottom: 1px dotted #222;
+}
+.callout a:hover,
+.callout a:active,
+.callout a:focus {
+	color: #222;
+	border-bottom: 1px solid #222;
+}
+.callout a:focus {
+	outline: thin dotted #222;
+}
+
+/* Skip Links */
+.skip-link {
+	background: #333;
+	border: 1px solid #666;
+}
+.skip-link:hover,
+.skip-link:active,
+.skip-link:focus {
+	border: 1px solid #444;
+}
+.custom-background .site {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.genericon {
+	padding: 0 0.125em;
+	vertical-align: middle !important;
+}
+
+/* Header
+----------------------------------------------- */
+
+/* Site Title and Description */
+.site-description {
+	color: #d5d5d5;
+}
+
+/* =Content
+----------------------------------------------- */
+/* Sticky and Front Page Template */
+.content-area .sticky,
+.home .content-area article.page,
+.page-template-templatesfront-page-php #content article.page {
+	background-color: #222;
+	border: 1px solid #666;
+}
+.title {
+	color: #d5d5d5;
+}
+.hentry {
+	border-bottom: 1px solid #444;
+}
+
+/* =Asides
+----------------------------------------------- */
+.blog .format-aside,
+.archive .format-aside {
+	background-color: #222;
+	border-left: 1px solid #666;
+	border-right: 1px solid #666;
+}
+.term-post-format-aside .format-aside {
+	border-top: 1px solid #666;
+}
+
+/* =Media
+----------------------------------------------- */
+.wp-caption {
+	background: #333;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border: 1px solid #666;
+}
+.wp-caption-text {
+	color: #d5d5d5;
+}
+.content-area .gallery-item a img {
+	border: 3px solid #666;
+}
+.content-area .gallery-item a:hover img,
+.content-area .gallery-item a:active img,
+.content-area .gallery-item a:focus img {
+	border: 3px solid #444;
+}
+
+/* =Navigation
+----------------------------------------------- */
+/* Menus */
+.main-navigation a:hover,
+.main-navigation a:active,
+.main-navigation a:focus,
+.secondary-navigation a:hover,
+.secondary-navigation a:active,
+.secondary-navigation a:focus {
+	border-bottom: 1px solid #15B9ff;
+}
+
+/* =Comments
+----------------------------------------------- */
+.no-password,
+.no-comments,
+.comment-awaiting-moderation {
+	color: #d5d5d5;
+}
+.comments-area {
+	border-top: 1px solid #444;
+}
+.comment-list .comment-metadata {
+	color: #d5d5d5;
+}
+a.comment-reply-link {
+	background: #666;
+	border: 1px solid #444;
+	color: #f5f5f5;
+}
+a.comment-reply-link:focus,
+a.comment-reply-link:active,
+a.comment-reply-link:hover {
+	background: #333;
+	border: 1px solid #15B9ff;
+	color: #f5f5f5;
+}
+
+/* Post Author Highlighting */
+.comment-list li.bypostauthor {
+	background: #222;
+	border: 1px solid #666;
+}
+
+/* Comment Form */
+#respond input[type="text"],
+#respond input[type="email"],
+#respond input[type="url"],
+#respond textarea {
+	background: #444;
+	border: 1px solid #666;
+}
+#respond .comment-form-author label,
+#respond .comment-form-email label,
+#respond .comment-form-url label,
+#respond .comment-form-comment label {
+	background: #222;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	color: #d5d5d5;
+	display: block;
+	left: 0;
+	min-width: 100%;
+	padding: 0;
+	top: 16px;
+	z-index: 0;
+}
+#respond input[type="text"]:focus,
+#respond input[type="email"]:focus,
+#respond input[type="url"]:focus,
+#respond textarea:focus {
+	border: 1px solid #15B9ff;
+}
+#respond .comment-form-author .required,
+#respond .comment-form-email .required {
+	color: #eca0a2;
+}
+#respond #cancel-comment-reply-link {
+	color: #d5d5d5;
+}
+
+/* =Widgets
+----------------------------------------------- */
+.sidebar {
+	border-top: 1px solid #444;
+}
+
+/* =Footer
+----------------------------------------------- */
+.site-footer {
+	background-color: #333;
+	border-top: 1px solid #666;
+	border-bottom: 1px solid #666;
+}
