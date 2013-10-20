@@ -9,7 +9,7 @@ You can read more about [Accessible Zen on its project page](http://davidakenned
 ## Includes
 
 * A child theme template for creating your own child themes based on Accessible Zen.
-* A child theme called Accessible Zen Dark, featuring a light on dark color scheme. Check out the [Accessible Zen Dark Demo](http://wpthemes.davidakennedy.com/accessible-zen-dark/).
+* A child theme called Accessible Zen Dark, featuring a light on dark color scheme. Check out the [Accessible Zen Dark Demo](http://wpthemes.davidakennedy.com/accessible-zen-dark/) or [view the color scheme](http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&colors=f5f5f5,222222,333333,444444,666666,59cdff,15b9ff,eca0a2&main=222222&level=AA).
 
 ## Other Notes
 
