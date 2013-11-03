@@ -43,10 +43,10 @@
 		</div><!-- .site-banner -->
 		
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-			<nav role="navigation" class="main-navigation cf">
-				<h1 class="screen-reader-text"><?php _e( 'Main Menu', 'accessiblezentopmenu' ); ?></h1>
+			<nav role="navigation" id="main-navigation" class="main-navigation cf">
+				<h1 class="menu-toggle"><?php _e( 'Main Menu', 'accessiblezentopmenu' ); ?></h1>
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'drop-nav' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- .main-navigation -->
 		<?php endif; ?>
 	</header><!-- #masthead .site-header -->

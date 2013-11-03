@@ -14,7 +14,7 @@
  
 function aztopmenu_scripts_styles() {
         
-    wp_enqueue_script( 'keyboard-dropdown-menu-navigation', get_stylesheet_directory_uri() . '/js/keyboard-dropdown-menu-navigation.js', array( 'jquery' ), '20131101', true );
+    wp_enqueue_script( 'keyboard-dropdown-menu-navigation', get_stylesheet_directory_uri() . '/js/main-navigation.js', array( 'jquery' ), '20131101', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'aztopmenu_scripts_styles' );

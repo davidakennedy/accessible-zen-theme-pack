@@ -20,16 +20,9 @@ Child themes are awesome! Read more here: http://codex.wordpress.org/Child_Theme
 	border-top: 3px double #e5e5e5;
 	margin-top: 1.5em;
 	padding: 1.5em 0;
-	text-align: center;
 }
-.main-navigation ul {
-	list-style: none;
-	margin: 0 auto;
-	padding-left: 0;
-}
-.main-navigation ul > li {
-	padding-right: 0;
-	position: relative;
+.main-navigation li {
+	padding: 0.25em 0;
 }
 .main-navigation a {
 	padding: 0.5em 0.5em 0.5em 0;
@@ -39,65 +32,45 @@ Child themes are awesome! Read more here: http://codex.wordpress.org/Child_Theme
 .main-navigation a:focus {
 	border: 0;
 }
-
-/* Dropdown */
-.main-navigation ul ul {
-	background: #f5f5f5;
-	border: 1px solid #d5d5d5;
-	-webkit-border-radius: 0 0 3px 3px;
-	-moz-border-radius: 0 0 3px 3px;
-	border-radius: 0 0 3px 3px;
-	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-	list-style: none;
-	position: absolute;
-	left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
-	text-align: left;
-	top: 100%;
-	width: 12.5em;
-	z-index: 9999;
-}
-.main-navigation ul ul ul {
-	-webkit-border-radius: 0 3px 3px 0;
-	-moz-border-radius: 0 3px 3px 0;
-	border-radius: 0 3px 3px 0;
-	position: absolute;
-	left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
-	padding: 0;
-	text-align: left;
-	top: 0;
-	z-index: 9999;
-}
-.main-navigation ul ul li,
-.main-navigation ul ul ul li {
-	display: block;
-	width: 100%;
-}
 .main-navigation ul ul a,
 .main-navigation ul ul ul a {
-	display: block;
 	font-size: 1em;
-	padding-left: 0.5em;
 }
-.main-navigation li:hover > ul,
-.main-navigation li.focus > ul { /* Display the dropdown on hover */
-	left: 0; /* Bring back on-screen when needed */
+
+/* Small menu */
+/* Bring main menu text back on mobile */
+.menu-toggle {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: 50%;
+	/* Look like a button */
+	border: 2px solid #008fcc;
+	border-color: #008fcc #008fcc #00354c #008fcc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #00628c;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.125em;
+	margin: 0 auto 0.25em;
+	padding: 0.3125em;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	text-transform: uppercase;
 }
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul { /* Display the dropdown on hover */
-    left: 100%; /* Bring back on-screen when needed */
-    top: 0;
+
+/* Handle toggling */
+.menu-toggle,
+.main-navigation.toggled .nav-menu,
+.main-navigation.toggled .sub-menu {
+		display: block;
 }
-.main-navigation li:hover a { /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
-	border: 0;
-}
-.main-navigation li:hover ul a { /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
-	border: 0;
-}
-.main-navigation li:hover ul li a:hover,
-.main-navigation li.focus ul li a:focus { /* Here we define the most explicit hover states--what happens when you hover each individual link. */
-	background: #e5e5e5;
+.main-navigation ul {
+		display: none;
 }
 
 /* Media Queries
@@ -106,11 +79,98 @@ Child themes are awesome! Read more here: http://codex.wordpress.org/Child_Theme
 /* Min. width of 600 pixels */
 @media only screen and (min-width: 37.5em) {
 	
-	/* Nav abstraction adjustment */
+	/* Menu adjustments */
+	.main-navigation {
+		text-align: center;
+	}
+	.main-navigation ul {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+	.main-navigation li {
+		padding: 0;
+	}
 	.main-navigation ul > li {
 		display: inline-block;
 			vertical-align: top;
     		zoom: 1;
     		*display: inline;
+	}
+	.main-navigation ul > li {
+		position: relative;
+	}
+	
+	/* Dropdown */
+	.main-navigation ul ul {
+		background-color: #f5f5f5;
+		border: 1px solid #d5d5d5;
+		-webkit-border-radius: 0 0 3px 3px;
+		-moz-border-radius: 0 0 3px 3px;
+		border-radius: 0 0 3px 3px;
+		-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		list-style: none;
+		position: absolute;
+		left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+		text-align: left;
+		top: 100%;
+		width: 12.5em;
+		z-index: 9999;
+	}
+	.main-navigation ul ul ul {
+		-webkit-border-radius: 0 3px 3px 0;
+		-moz-border-radius: 0 3px 3px 0;
+		border-radius: 0 3px 3px 0;
+		position: absolute;
+		left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+		padding: 0;
+		text-align: left;
+		top: 0;
+		z-index: 9999;
+	}
+	.main-navigation ul ul li,
+	.main-navigation ul ul ul li {
+		display: block;
+		width: 100%;
+	}
+	.main-navigation ul ul a,
+	.main-navigation ul ul ul a {
+		display: block;
+		padding-left: 0.5em;
+	}
+	.main-navigation li:hover > ul,
+	.main-navigation li.focus > ul { /* Display the dropdown on hover */
+		left: 0; /* Bring back on-screen when needed */
+	}
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul { /* Display the dropdown on hover */
+		left: 100%; /* Bring back on-screen when needed */
+		top: 0;
+	}
+	.main-navigation li:hover a { /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+		border: 0;
+	}
+	.main-navigation li:hover ul a { /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+		border: 0;
+	}
+	.main-navigation li:hover ul li a:hover,
+	.main-navigation li.focus ul li a:focus { /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+		background: #e5e5e5;
+	}
+	
+	/* Small menu */
+	/* Hide main menu text */
+	.menu-toggle {
+        border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
 	}
 }
