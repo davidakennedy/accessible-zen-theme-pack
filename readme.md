@@ -10,6 +10,7 @@ You can read more about [Accessible Zen on its project page](http://davidakenned
 
 * A child theme template for creating your own child themes based on Accessible Zen.
 * A child theme called Accessible Zen Dark, featuring a light on dark color scheme. Check out the [Accessible Zen Dark Demo](http://wpthemes.davidakennedy.com/accessible-zen-dark/) or [view the color scheme](http://accessibility.oit.ncsu.edu/tools/color-contrast/accessible-color-palette.php?&colors=f5f5f5,222222,333333,444444,666666,59cdff,15b9ff,eca0a2&main=222222&level=AA).
+* A child theme called Accessible Zen Top Menu, featuring a menu area in the header plus a keyboard-accessible features. Check out the [Accessible Zen Top Menu Demo](http://wpthemes.davidakennedy.com/accessible-zen-top-menu/).
 
 ## Other Notes
 
@@ -17,6 +18,10 @@ You can read more about [Accessible Zen on its project page](http://davidakenned
 * More goodies will be added in the future to help you get the most out of Accessible Zen!
 
 ### Changelog
+
+**November 05, 2013**
+
+Add Accessible Zen Top Menu: Version 0.3
 
 **October 20, 2013**
 
