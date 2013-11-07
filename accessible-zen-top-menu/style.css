@@ -13,8 +13,9 @@ Child themes are awesome! Read more here: http://codex.wordpress.org/Child_Theme
 /* Let's import the stylesheet from Accessible Zen. */
 @import url("../accessible-zen/style.css");
 
-/* Main menu additions */
-/* Menu */
+/* Main menu additions
+----------------------------------------------- */
+/* Menu on mobile */
 .main-navigation {
 	border-bottom: 3px double #e5e5e5;
 	border-top: 3px double #e5e5e5;
@@ -73,9 +74,109 @@ Child themes are awesome! Read more here: http://codex.wordpress.org/Child_Theme
 		display: none;
 }
 
+/* IE styles, IE 7-8
+----------------------------------------------- */
+.ie .main-navigation {
+	text-align: center;
+}
+.ie .main-navigation ul {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.ie .main-navigation li {
+	padding: 0;
+}
+.ie .main-navigation ul > li {
+	display: inline-block;
+		vertical-align: top;
+		zoom: 1;
+		*display: inline;
+}
+.ie .main-navigation ul > li {
+	position: relative;
+}
+
+/* Dropdown */
+.ie .main-navigation ul ul {
+	background-color: #f5f5f5;
+	border: 1px solid #d5d5d5;
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	list-style: none;
+	position: absolute;
+	left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+	text-align: left;
+	top: 100%;
+	width: 12.5em;
+	z-index: 9999;
+}
+.ie .main-navigation ul ul ul {
+	-webkit-border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+	position: absolute;
+	left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+	padding: 0;
+	text-align: left;
+	top: 0;
+	z-index: 9999;
+}
+.ie .main-navigation ul ul li,
+.ie .main-navigation ul ul ul li {
+	display: block;
+	width: 100%;
+}
+.ie .main-navigation ul ul a,
+.ie .main-navigation ul ul ul a {
+	display: block;
+	padding-left: 0.5em;
+}
+.ie .main-navigation li:hover > ul,
+.ie .main-navigation li.focus > ul { /* Display the dropdown on hover */
+	left: 0; /* Bring back on-screen when needed */
+}
+.ie .main-navigation ul ul li:hover > ul,
+.ie .main-navigation ul ul li.focus > ul { /* Display the dropdown on hover */
+	left: 100%; /* Bring back on-screen when needed */
+	top: 0;
+}
+.ie .main-navigation li:hover a { /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	border: 0;
+}
+.ie .main-navigation li:hover ul a { /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	border: 0;
+}
+.ie .main-navigation li:hover ul li a:hover,
+.main-navigation li.focus ul li a:focus { /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+	background: #e5e5e5;
+}
+
+/* Small menu */
+/* Hide main menu text */
+.ie .menu-toggle {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* Nav abstraction adjustment */
+.ie .nav li {
+	display: inline;
+}
+
 /* Media Queries
 ----------------------------------------------- */
-
 /* Min. width of 600 pixels */
 @media only screen and (min-width: 37.5em) {
 	
